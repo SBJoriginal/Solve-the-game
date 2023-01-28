@@ -1,4 +1,6 @@
-passwords = ['about', 'after','again','below','could','every','first','found','great', 'house','large', 'learn', 'never', 'other', 'place', 'plant', 'point', 'right', 'small', 'sound', 'spell', 'still', 'study', 'their', 'there', 'these', 'thing', 'think', 'three', 'water', 'where', 'which', 'world', 'would', 'write']
+passwords = ['about', 'after', 'again', 'below', 'could', 'every', 'first', 'found', 'great', 'house', 'large', 'learn',
+             'never', 'other', 'place', 'plant', 'point', 'right', 'small', 'sound', 'spell', 'still', 'study', 'their',
+             'there', 'these', 'thing', 'think', 'three', 'water', 'where', 'which', 'world', 'would', 'write']
 
 game = True
 choose = True
@@ -27,7 +29,7 @@ while game:
     letters = ''
     number_of_letters = ''
     for i in passwords:
-        if i[0]  in first_row or first_row == []:
+        if i[0] in first_row or first_row == []:
             if i[1] in second_row or second_row == []:
                 if i[2] in third_row or third_row == []:
                     if i[3] in fourth_row or fourth_row == []:
@@ -37,22 +39,20 @@ while game:
                             if (len(number_of_letters) % 5) == 0:
                                 letters += ", "
 
-
-
     print("the answer is :  ")
 
     if letters == []:
         print("THERE ARE NO MATCHING WORDS! PLEASE REVISE YOUR LETTERS!....bitch")
     else:
-        letters = letters [0:(len(letters) - 2)]
+        letters = letters[0:(len(letters) - 2)]
         letters += '.'
         print(letters)
 
     see_list = input("do you want to see the lists: ")
     if see_list == "y" or see_list == ' yes':
 
-        print("first_row = ", first_row )
-        print("second_row = ", second_row )
+        print("first_row = ", first_row)
+        print("second_row = ", second_row)
         print("third_row = ", third_row)
         print("fourth_row = ", fourth_row)
         print("fifth_row = ", fifth_row)
@@ -74,7 +74,7 @@ while game:
             changing = False
 
     while changing:
-        change = input('put number of list you want to change ("all" for all of them): ' )
+        change = input('put number of list you want to change ("all" for all of them): ')
         if change == "1":
             first_row = []
             a = input("first letters in the row: ")
