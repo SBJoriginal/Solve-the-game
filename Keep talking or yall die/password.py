@@ -34,7 +34,7 @@ while game:
                 if i[2] in third_row or third_row == []:
                     if i[3] in fourth_row or fourth_row == []:
                         if i[4] in fifth_row or fifth_row == []:
-                            letters += i
+                            letters += i.upper()
                             number_of_letters += i
                             if (len(number_of_letters) % 5) == 0:
                                 letters += ", "
