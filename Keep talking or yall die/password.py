@@ -24,20 +24,29 @@ while game:
         fifth_row += e
         all = False
 
-    letters = []
+    letters = ''
+    number_of_letters = ''
     for i in passwords:
-        if i[0]  in first_row:
-            if i[1] in second_row:
-                if i[2] in third_row:
-                    if i[3] in fourth_row:
-                        if i[4] in fifth_row:
+        if i[0]  in first_row or first_row == []:
+            if i[1] in second_row or second_row == []:
+                if i[2] in third_row or third_row == []:
+                    if i[3] in fourth_row or fourth_row == []:
+                        if i[4] in fifth_row or fifth_row == []:
                             letters += i
+                            number_of_letters += i
+                            if (len(number_of_letters) % 5) == 0:
+                                letters += ", "
+
+
 
     print("the answer is :  ")
+
     if letters == []:
         print("THERE ARE NO MATCHING WORDS! PLEASE REVISE YOUR LETTERS!....bitch")
     else:
-     print (letters)
+        letters = letters [0:(len(letters) - 2)]
+        letters += '.'
+        print(letters)
 
     see_list = input("do you want to see the lists: ")
     if see_list == "y" or see_list == ' yes':
