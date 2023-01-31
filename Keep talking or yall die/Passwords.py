@@ -130,4 +130,4 @@ def passwords():
                     maybe_finish_selector = False
                     change_small = False
 
-    print("\nThank you for playing. going back to the menu!")
+    print("\nThank you for playing. going back to the menu!\n")

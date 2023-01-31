@@ -1,4 +1,6 @@
 from Button_fonctions import *
+
+
 def buttons():
     game = True
     game_not_over = True
@@ -51,4 +53,4 @@ def buttons():
             if play_again.upper() == "N" or play_again.upper() == "NO":
                 choosing_play_again = False
                 game = False
-                print("\nThank you for playing. going back to the menu!")
+                print("\nThank you for playing. going back to the menu!\n")
