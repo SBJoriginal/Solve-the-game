@@ -1,8 +1,10 @@
 from Wires import wires
 from Passwords import passwords
+from button_main import buttons
 
 game_list = "1. Wires (W)\n" \
-            "2. Passwords (PW)\n" \
+            "2. BUTTONS (B)\n"\
+            "3. Passwords (PW)\n" \
             " "
 print("\nWELCOME TO THE MAIN MENU!\n")
 print("\n'Leave' to quit the simulation\n")
@@ -14,8 +16,12 @@ while True:
     if game_mode.upper() == "PASSWORDS" or game_mode.upper() == "PASSWORD" or game_mode.upper() == "PW":
         passwords()
 
+    if game_mode.upper() == "BUTTONS" or game_mode.upper() == "BUTTON" or game_mode.upper() == "B":
+        buttons()
+
     if game_mode.upper() == "MENU":
         print(game_list)
+
 
     if game_mode.upper() == "LEAVE":
         print("\nHave a wonderful day!")

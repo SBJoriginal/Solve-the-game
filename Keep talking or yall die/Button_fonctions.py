@@ -77,6 +77,7 @@ def choosing_batteries_fonction():
 
 def choosing_label_fonction():
     choosing_label = True
+    choosing_if_second_label = True
     while choosing_label:
         labels = input("\nName of a label on the bomb? ")
         labels = labels.upper()
@@ -85,11 +86,25 @@ def choosing_label_fonction():
         else:
             print("\nEnter a valid label from the list... ")
             print(possible_labels)
-    return labels
+    while choosing_if_second_label:
+        second_label = input("\nIs there a second label on the bomb? ")
+        if second_label.upper() == "Y" or second_label.upper() == "YES":
+            second_label = choosing_label_fonction_2()
+            choosing_if_second_label = False
+            return labels, second_label
+        if second_label.upper() == "N" or second_label.upper() == "NO":
+            choosing_if_second_label = False
+            return labels, None
 
-# button_coulour_fonction()
-# # choosing_names_fonction()
-# choosing_strips_fonction()
-# # holding_button_fonction(choosing_strips_fonction())
-# choosing_batteries_fonction()
-# choosing_label_fonction()
+
+def choosing_label_fonction_2():
+    choosing_label = True
+    while choosing_label:
+        labels = input("\nName of the second label on the bomb? ")
+        labels = labels.upper()
+        if labels in possible_labels:
+            choosing_label = False
+        else:
+            print("\nEnter a valid label from the list... ")
+            print(possible_labels)
+    return labels
