@@ -1,5 +1,6 @@
 from Wires import wires
 from Passwords import passwords
+from Simon_says import simon_says
 import sys
 
 sys.path.insert(1,
@@ -11,6 +12,7 @@ welcoming = True
 game_list = "1. Wires (W)\n" \
             "2. BUTTONS (B)\n" \
             "3. Passwords (P)\n" \
+            "4. Simon Says (S)\n" \
             " "
 while True:
     while welcoming:
@@ -45,12 +47,16 @@ while True:
     if game_mode.upper() == "WIRES" or game_mode.upper() == "WIRE" or game_mode.upper() == "W":
         wires()
         welcoming = True
-    if game_mode.upper() == "PASSWORDS" or game_mode.upper() == "PASSWORD" or game_mode.upper() == "PW":
+    if game_mode.upper() == "PASSWORDS" or game_mode.upper() == "PASSWORD" or game_mode.upper() == "P":
         passwords()
         welcoming = True
 
     if game_mode.upper() == "BUTTONS" or game_mode.upper() == "BUTTON" or game_mode.upper() == "B":
         buttons()
+        welcoming = True
+
+    if game_mode.upper() == "SIMON" or game_mode.upper() == "S":
+        simon_says()
         welcoming = True
 
     if game_mode.upper() == "MENU":
