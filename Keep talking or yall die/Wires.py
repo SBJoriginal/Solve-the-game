@@ -234,3 +234,32 @@ def wires():
                 playing_wires = False
 
     print("\nThank you for playing. going back to the menu!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
