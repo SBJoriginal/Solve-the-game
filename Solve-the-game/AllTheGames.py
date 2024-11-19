@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(1,
                 '/Users/lenny/PycharmProjects copy/TP2/keep-talking-and-nobody-explodes/Keep talking or yall die/Buttons')
-from button_main import buttons
+from Buttons.button_main import buttons
 
 welcoming = True
 
